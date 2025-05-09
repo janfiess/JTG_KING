@@ -12,20 +12,14 @@ class Oscin:
 		parent().par.Prevosckey = parent().par.Latestosckey
 		parent().par.Latestosckey = key
 
-		if key == "/testosc":
-			print("Test erfolgreich")
-			op.Clipgun_flash_individual.op("video2").Play()
-		
-		# Message kommt vom Max
 		# FLASH COLLECTIVE: Video wird über alle Tetraeder abgespielt, aber nur, wenn individual mode eingestellt ist.
-		elif key == "/Tetraeder/Collective":
-			print("/Tetraeder/Collective")
-			# if parent().par.Prevosckey != parent().par.Latestosckey:
-			# 	return
-			if value == "red":
-				op.Clipgun_flash_collective_tetraeder.Play(0, "left")   # 0 -> red, "left" -> next start pos
-			elif value == "blue":
-				op.Clipgun_flash_collective_tetraeder.Play(2, "right")   # 2 -> blue, "right" -> next start pos
+		
+		if key == "/Tetraeder/ramp/left":
+			op.ScenePlayer.Anim_collective_ramp("left")
+
+		elif key == "/Tetraeder/ramp/right":
+			op.ScenePlayer.Anim_collective_ramp("right")
+			
 
 		elif key == "/Tetraeder/All":
 			if int(value) == 1:
@@ -36,6 +30,7 @@ class Oscin:
 
 		# Message kommt von Max (Audio), zuvor hat Max ein Signal vom Buzzer erhalten
 		# FLASH INDIVIDUAL: einzelne Tetraeder erleuchten
+
 		elif key == "/Tetraeder/Index/Red":
 			op.Clipgun_flash_individual.Play(0, value)    # 0 -> red,  value ist id (0-7) des Tetraeders
 		elif key == "/Tetraeder/Index/Blue":
