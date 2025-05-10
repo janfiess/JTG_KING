@@ -42,6 +42,7 @@ class Clipgunflash:
 
 		# [variation][color]
 		myClip_container = self.clips[variation][color]
+		# printf("myClip_container: {myClip_container}")
 		myClipfile = op(myClip_container).par.Filergb
 		myMoviePlayer = op(f"moviefilein_rgb_{tetraeder_id}")
 		myMoviePlayer.par.file = myClipfile

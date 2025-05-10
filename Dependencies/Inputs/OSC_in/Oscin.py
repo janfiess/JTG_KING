@@ -37,12 +37,6 @@ class Oscin:
 			op.Clipgun_flash_individual.Play(2, value)    # 2 -> blue,  value ist id (0-7) des Tetraeders
 
 		
-		# Message kommt von Max (Audio), zuvor hat Max ein Signal vom Buzzer erhalten
-		# SUSTAIN: einzelne Tetraeder gehen an und toggeln dann zwischen rot und blau
-		elif key == "/Tetraeder/Sustain/Red":
-			op.Clipgun_sustain.Play(0, value)    # 0 -> red,  value ist id (0-7) des Tetraeders
-		elif key == "/Tetraeder/Sustain/Blue":
-			op.Clipgun_sustain.Play(2, value)    # 2 -> blue,  value ist id (0-7) des Tetraeders
 
 		# Base Anim
 		elif key == "/Tetraeder/Baseanim":

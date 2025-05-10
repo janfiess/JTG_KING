@@ -63,4 +63,4 @@ class Clipgunflash:
 		op(f"placement_rgb{next_player_id}").par.ty = self.table_player_placement[tetraeder_id, 1]
 		op(f"placement_cwww{next_player_id}").par.tx = self.table_player_placement[tetraeder_id, 0]
 		op(f"placement_cwww{next_player_id}").par.ty = self.table_player_placement[tetraeder_id, 1]
-		op(myClip).Play()    # triggert Script innerhalb der einzelnen Video-Button-Container
+		op("clips").op(myClip).Play()    # triggert Script innerhalb der einzelnen Video-Button-Container
