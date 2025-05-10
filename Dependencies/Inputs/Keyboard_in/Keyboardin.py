@@ -27,6 +27,8 @@ class Keyboardin:
 
 		# spiele animationen ab
 		# Collective
+		
+		return
 
 
 		if key == "kr":

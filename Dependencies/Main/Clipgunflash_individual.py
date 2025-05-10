@@ -16,21 +16,24 @@ class Clipgunflash:
 				"video1", # red
 				"video2", # green
 				"video3", # blue
-				"video4"  # weiss
+				"video4", # kaltweiss
+				"video5"  # warmweiss
 			],
 			# variation 1
 			[
-				"video5", # red
-				"video6", # green
-				"video7", # blue
-				"video8"  # weiss
+				"video6", # red
+				"video7", # green
+				"video8", # blue
+				"video9", # kaltweiss
+				"video10" # warmweiss
 			],
-			# variation 1
+			# variation 2
 			[
-				"video9", # red
-				"video10", # green
-				"video11", # blue
-				"video12"  # weiss
+				"video11", # red
+				"video12", # green
+				"video13", # blue
+				"video14", # kaltweiss
+				"video15"  # warmweiss
 			]
 		]
 

@@ -11,17 +11,25 @@ class Buttonflash:
 	def Play(self):
 		next_player_id = parent(3).par.Nextplayerid
 		clipname = parent().name
+		print(f"clip to play: {clipname}")
 		
 		parent(3).pars(f"Latestkeypressed{next_player_id}")[0].val = clipname
 		
-		moviefile_cwww = parent(3).op(f"moviefilein_cwww_{next_player_id}")
+		moviefile_cwww_zone0 = parent(3).op(f"moviefilein_cwww_{next_player_id}")
 		#print(f"moviefilein{next_player_id}")
-		moviefile_cwww.par.cuepoint = 0
-		moviefile_cwww.par.cuepulse.pulse()
-		moviefile_cwww.par.play = 1
+		self.startVideo(moviefile_cwww_zone0)
 		
-		moviefile_rgb = parent(3).op(f"moviefilein_rgb_{next_player_id}")
-		moviefile_rgb.par.cuepoint = 0
-		moviefile_rgb.par.cuepulse.pulse()
-		moviefile_rgb.par.play = 1
+		moviefile_rgb_zone0 = parent(3).op(f"moviefilein_rgb_{next_player_id}")
+		self.startVideo(moviefile_rgb_zone0)
 
+		moviefile_cwww_zone1 = parent(3).op(f"moviefilein_cwww_{next_player_id}")
+		self.startVideo(moviefile_cwww_zone1)
+		
+		moviefile_rgb_zone1 = parent(3).op(f"moviefilein_rgb_{next_player_id}")
+		self.startVideo(moviefile_rgb_zone1)
+
+	
+	def startVideo(self, moviefile):
+		moviefile.par.cuepoint = 0
+		moviefile.par.cuepulse.pulse()
+		moviefile.par.play = 1

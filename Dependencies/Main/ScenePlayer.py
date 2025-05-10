@@ -9,30 +9,23 @@ class ScenePlayer:
 	def ControlTetraederOnly(self):
 		print("ControlTetraederOnly")
 		
-		op.Clipgun_flash_collective_tetraeder.par.Mute = 0
-		op.Clipgun_flash_collective_sticks.par.Mute = 1
+		# op.Clipgun_flash_collective_tetraeder.par.Mute = 0
+		# op.Clipgun_flash_collective_sticks.par.Mute = 1
+
+		op.Clipgun_collective.par.Mutezone0 = 0   # tetraeder unmuted
+		op.Clipgun_collective.par.Mutezone1 = 1   # sticks muted
 		
 	# called with key w
 	def ControlSticksOnly(self):
 		print("ControlSticksOnly")
-		op.Clipgun_flash_collective_tetraeder.par.Mute = 1
-		op.Clipgun_flash_collective_sticks.par.Mute = 0
+		# op.Clipgun_flash_collective_tetraeder.par.Mute = 1
+		# op.Clipgun_flash_collective_sticks.par.Mute = 0
+
+		op.Clipgun_collective.par.Mutezone0 = 1   # tetraeder muted
+		op.Clipgun_collective.par.Mutezone1 = 0   # sticks unmuted
 		
 	# called with key e
 	def ControlAll(self):
 		print("ControlAll")
-		op.Clipgun_flash_collective_tetraeder.par.Mute = 0
-		op.Clipgun_flash_collective_sticks.par.Mute = 0
-
-
-	# Anims
-
-	def Anim_collective_ramp(self, startpos):
-		print("Anim_lr_collective")
-		op.Clipgun_flash_collective_tetraeder.Play(0, startpos)
-		op.Clipgun_flash_collective_sticks.Play(0, startpos)
-
-	def Anim_collective_flashAll(self, color):	
-		print("Anim_flashAll_collective")
-		op.Clipgun_flash_collective_tetraeder.Play(color, "synchronous")
-		op.Clipgun_flash_collective_sticks.Play(color, "synchronous")
+		op.Clipgun_collective.par.Mutezone0 = 0   # tetraeder unmuted
+		op.Clipgun_collective.par.Mutezone1 = 0   # sticks unmuted
