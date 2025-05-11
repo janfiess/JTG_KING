@@ -13,7 +13,7 @@ class Startup:
 		
 	def Step2(self):
 		# ui.openTextport()
-		op.Clipgun_base.op('video1/triggerbutton').click()
+		op.Clipgun_base.op('clips/video1/triggerbutton').click()
 	
 	def Step3(self):
 		# op.Logger.Info("[Startup]: startup part 3")
