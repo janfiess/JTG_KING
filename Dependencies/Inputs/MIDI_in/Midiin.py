@@ -21,7 +21,15 @@ class Midiin:
 			op.ScenePlayer.op('simulator/collective1/selectlats2').click()
 		elif key == "ch1n35":
 			op.ScenePlayer.op('simulator/collective1/selectlats3').click()
-
+		elif key == "ch1n38":
+			target = op.Pixelmapping.op('get_color_overlay/select_generative_overlay')
+			content =  op.Clipgun_collective.op(f"clips/clip17/null_content")
+			target.par.top = content
+		elif key == "ch1n39":
+			target = op.Pixelmapping.op('get_color_overlay/select_generative_overlay')
+			content =  op.Clipgun_collective.op(f"clips/clip17/null_content")
+			target.par.top = content
+		
 		# Base / Background anims
 
 		elif key == "ch1n40":
@@ -32,7 +40,7 @@ class Midiin:
 		elif key == "ch1n25":
 			op.Clipgun_collective.op("clips/video5").par.Trigger.pulse()
 		elif key == "ch1n26":
-			op.Clipgun_collective.op("clips/video1").par.Trigger.pulse()
+			op.Clipgun_collective.op("clips/video4").par.Trigger.pulse()
 		elif key == "ch1n27":
 			op.Clipgun_collective.op("clips/video2").par.Trigger.pulse()
 		elif key == "ch1n28":
@@ -43,7 +51,7 @@ class Midiin:
 		elif key == "ch1n30":
 			op.Clipgun_collective.op("clips/video9").par.Trigger.pulse()
 		elif key == "ch1n31":
-			op.Clipgun_collective.op("clips/video6").par.Trigger.pulse()
+			op.Clipgun_collective.op("clips/video16").par.Trigger.pulse()
 		elif key == "ch1n32":
 			op.Clipgun_collective.op("clips/video10").par.Trigger.pulse()
 
